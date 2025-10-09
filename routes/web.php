@@ -35,6 +35,10 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
+Route::get('/', function () {
+    return redirect()->route('landing');
+});
+
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'postLogin']);
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
@@ -46,7 +50,7 @@ Route::get('/ganti_password', [AuthController::class, 'showGantiPassword'])->nam
 Route::post('/forgot_password', [AuthController::class, 'forgotPassword'])->name('forgot_password.post');
 Route::post('/simpan_password', [AuthController::class, 'simpanPassword'])->name('simpan_password.post');
 
-Route::get('/landing', [LandingController::class, 'index']);
+Route::get('/landing', [LandingController::class, 'index'])->name('landing');
 
 Route::middleware(['dosen:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
