@@ -1,15 +1,16 @@
 {
-  "name": "playwright",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "@playwright/test": "^1.56.1",
-    "@types/node": "^24.9.1"
-  }
+    "name": "laravel-achieveup-playwright",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "test": "playwright test",
+        "test:headed": "playwright test --headed",
+        "install-browsers": "npx playwright install",
+        "show-report": "playwright show-report"
+    },
+    "devDependencies": {
+        "playwright": "^1.56.1",
+        "@playwright/test": "^1.56.1",
+        "@types/node": "^24.9.1"
+    }
 }
