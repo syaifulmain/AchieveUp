@@ -7,6 +7,7 @@ Quick start
 ```bash
 cd playwright
 npm install
+npx playwright install
 ```
 
 2. Start the Laravel app (in project root):
