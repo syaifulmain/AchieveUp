@@ -19,13 +19,13 @@ php artisan serve
 
 ```bash
 cd playwright
-npx playwright test
+npm test
 ```
 
 4. Show report in browser(after tests run):
 
 ```bash
-npx playwright show-report
+npm show-report
 ```
 
 Environment
